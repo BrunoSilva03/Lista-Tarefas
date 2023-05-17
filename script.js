@@ -22,7 +22,7 @@ function carregarTasks() {
     let tarefa_container = `
     <div class="tarefa">
     
-    <input class="nome" placeholder="Digite a tarefa" type="text" value="${nome}"/>
+    <input class="nome" placeholder="Tarefa" type="text" value="${nome}"/>
     
     <input class="data" placeholder="Data" type="date" value="${data}"/>
     
@@ -67,7 +67,7 @@ function adicionarTarefa() {
 
 
 function salvarTarefa() {
-    document.querySelectorAll("#tasksContainer . salvar").forEach((el, i) => {
+    document.querySelectorAll("#tasksContainer .salvar").forEach((el, i) => {
         el.addEventListener("click", () => {
 
             let nome = el.parentElement.parentElement.querySelector(".nome").value;
