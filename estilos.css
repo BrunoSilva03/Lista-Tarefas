@@ -134,6 +134,246 @@ h1 {
     }
 }
 
+@media screen and (min-width: 701px) and (max-width: 992px) {
+    button#btnAdicionar {
+        background-color: rgb(25, 233, 25);
+        color: white;
+        border: none;
+        padding: 15px;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: x-large;
+        border-radius: 50%;
+        position: fixed;
+        top: 90%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+    
+    }
+    
+    button#btnAdicionar:hover {
+        background-color: rgb(18, 175, 18);
+    }
+    
+    button#btnCapturar {
+        background-color:blue;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        position: fixed;
+        left: 3%;
+        top: 87%;
+    }
+    
+    button#btnCapturar:hover {
+        background-color:rgb(1, 1, 132);
+    }
+    
+    div.container p{
+        text-align: center;
+        
+    }
+    
+    .tasks {
+        padding: 1rem;
+        border: 1px solid #ccc;
+    }
+    
+    
+    .tasks button {
+        border: none;
+        background-color: #5eb2e6;
+        color: white;
+        border-radius: 3px;
+        text-transform: uppercase;
+        padding: .75rem 1rem;
+    }
+    
+    
+    .tasks .container {
+        margin-top: 1rem;
+        display: grid;
+        grid-gap: .5rem;
+    }
+    
+    .tasks .container input {
+        border: 1px solid black;
+        padding: 12px;
+        
+    }
+    
+    .tasks .container input:focus {
+        border: 2px solid black;
+        outline: none;
+    }
+    
+    .tasks .container .tarefa {
+        text-align: center;
+    }
+    
+    .tasks .container .tarefa .action {
+        text-align: right;
+        margin-top: 10px;
+    }
+    
+    
+    .tasks .container .tarefa .action a {
+        text-transform:uppercase;
+        text-decoration: none;
+        padding: .5rem .75rem;
+        display: inline-block;
+        
+    }
+    
+    .tasks .container .tarefa .action a.salvar {
+        border-radius: 5px; 
+        color: #005c54;
+    }
+
+    .tasks .container .tarefa .action a.salvar:hover {
+        border-radius: 5px; 
+        background-color: #013e39;
+        color: white;
+    }
+    
+    .disabled {
+        pointer-events: none;
+        opacity: .5;
+        filter: grayscale(100%);
+    }
+
+    footer {
+        text-align: center;
+        border-top: 3px solid blue;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    button#btnAdicionar {
+        background-color: rgb(25, 233, 25);
+        color: white;
+        border: none;
+        padding: 15px;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: x-large;
+        border-radius: 50%;
+        position: fixed;
+        top: 90%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+    
+    }
+    
+    button#btnAdicionar:hover {
+        background-color: rgb(18, 175, 18);
+    }
+    
+    button#btnCapturar {
+        background-color:blue;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        position: fixed;
+        left: 3%;
+        top: 87%;
+    }
+    
+    button#btnCapturar:hover {
+        background-color:rgb(1, 1, 132);
+    }
+    
+    div.container p{
+        text-align: center;
+        
+    }
+    
+    .tasks {
+        padding: 1rem;
+        border: 1px solid #ccc;
+    }
+    
+    
+    .tasks button {
+        border: none;
+        background-color: #5eb2e6;
+        color: white;
+        border-radius: 3px;
+        text-transform: uppercase;
+        padding: .75rem 1rem;
+    }
+    
+    
+    .tasks .container {
+        margin-top: 1rem;
+        display: grid;
+        grid-gap: .5rem;
+    }
+    
+    .tasks .container input {
+        border: 1px solid black;
+        padding: 15px;
+        
+    }
+    
+    .tasks .container input:focus {
+        border: 2px solid black;
+        outline: none;
+    }
+    
+    .tasks .container .tarefa {
+        text-align: center;
+    }
+    
+    .tasks .container .tarefa .action {
+        text-align: right;
+        margin-top: 10px;
+    }
+    
+    
+    .tasks .container .tarefa .action a {
+        text-transform:uppercase;
+        text-decoration: none;
+        padding: .5rem .75rem;
+        display: inline-block;
+        
+    }
+    
+    .tasks .container .tarefa .action a.salvar {
+        border-radius: 5px; 
+        color: #005c54;
+    }
+
+    .tasks .container .tarefa .action a.salvar:hover {
+        border-radius: 5px; 
+        background-color: #013e39;
+        color: white;
+    }
+    
+    .disabled {
+        pointer-events: none;
+        opacity: .5;
+        filter: grayscale(100%);
+    }
+
+    footer {
+        text-align: center;
+        border-top: 3px solid blue;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        height: 40px;
+    }
+}
+
 @media screen and (min-width: 1200px) {
     button#btnAdicionar {
         background-color: rgb(25, 233, 25);

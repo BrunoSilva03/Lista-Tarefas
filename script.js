@@ -40,6 +40,8 @@ function carregarTasks() {
     tasks_container.innerHTML += tarefa_container;
   });
 
+ 
+
   salvarTarefa();
 
   removerTarefa();
@@ -90,11 +92,18 @@ function salvarTarefa() {
                 horario: horario,
             });
 
+            
+
             carregarTasks();
+
+            let titulo = document.querySelector(".salvar");
+            titulo.textContent = "✔Salvo"
 
             travarOutros(false);
         })
     })
+
+    
 }
 
 function travarOutros(element) {
@@ -112,7 +121,7 @@ function travarOutros(element) {
 
 //init
 document.querySelector("#btnAdicionar").addEventListener("click", adicionarTarefa);
-carregarTasks();
+//carregarTasks();
 
 
 //capturarDados
