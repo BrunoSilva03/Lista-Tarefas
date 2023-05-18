@@ -12,42 +12,46 @@ function carregarTasks() {
 
     tasks_container.innerHTML = "";
 
-  tarefa.forEach((el) => {
-    let nome = el.nome;
+    tarefa.forEach((el) => {
+        
 
-    let data = el.data;
+            let nome = el.nome;
 
-    let horario = el.horario;
+            let data = el.data;
 
-    let tarefa_container = `
-    <div class="tarefa">
-    
-    <input class="nome" placeholder="Tarefa" type="text" value="${nome}"/>
-    
-    <input class="data" placeholder="Data" type="date" value="${data}"/>
-    
-    <input class="horario" placeholder="Horário" type="datetime" value="${horario}"/>
-    
-        <div class="action">
-            <a href="#" class="salvar">salvar💾</a>
-            
-            <a href="#" class="remover">❌</a>
-            
-        </div>
-    
-    </div>`;
+            let horario = el.horario;
 
-    tasks_container.innerHTML += tarefa_container;
-  });
+            let tarefa_container = `
+                <div class="tarefa">
+                
+                <input class="nome" placeholder="Tarefa" type="text" value="${nome}"/>
+                
+                <input class="data" placeholder="Data" type="date" value="${data}"/>
+                
+                <input class="horario" placeholder="Horário" type="datetime" value="${horario}"/>
+                
+                <div class="action">
+                <a href="#" class="salvar">salvar💾</a>
+                
+                <a href="#" class="remover">❌</a>
+                
+                </div>
+                
+                </div>`;
 
- 
+            tasks_container.innerHTML += tarefa_container;
 
-  salvarTarefa();
+        
+    });
 
-  removerTarefa();
 
-  travarOutros();
-    
+
+    salvarTarefa();
+
+    removerTarefa();
+
+    travarOutros();
+
 }
 
 function removerTarefa() {
@@ -61,7 +65,7 @@ function removerTarefa() {
 }
 
 function adicionarTarefa() {
-    tarefa.push({nome: "", data: "", horario: ""});
+    tarefa.push({ nome: "", data: "", horario: "" });
     carregarTasks();
 
     travarOutros(document.querySelector("#tasksContainer > div:last-child"))
@@ -78,7 +82,7 @@ function salvarTarefa() {
 
             let horario = el.parentElement.parentElement.querySelector(".horario").value;
 
-            if(!nome.length || !data.length || !horario.length) {
+            if (!nome.length || !data.length || !horario.length) {
                 alert("Todos os campos precisam ser preenchidos para continuar.");
 
                 return false;
@@ -92,22 +96,20 @@ function salvarTarefa() {
                 horario: horario,
             });
 
-            
-
             carregarTasks();
 
-            let titulo = document.querySelector(".salvar");
-            titulo.textContent = "✔Salvo"
+
+            alert("Tarefa salva com Sucesso!!!");
 
             travarOutros(false);
         })
     })
 
-    
+
 }
 
 function travarOutros(element) {
-    if(element == false) {
+    if (element == false) {
         document.querySelectorAll(".tasks button, .tasks .container > div").forEach((el) => {
             el.classList.remove("disabled");
         });
@@ -121,7 +123,7 @@ function travarOutros(element) {
 
 //init
 document.querySelector("#btnAdicionar").addEventListener("click", adicionarTarefa);
-//carregarTasks();
+carregarTasks();
 
 
 //capturarDados
